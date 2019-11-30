@@ -10,7 +10,19 @@
   <script src="https://kit.fontawesome.com/2d71cd40b1.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Forked from a template on Tutorialzine: https://tutorialzine.com/2016/06/freebie-landing-page-template-with-flexbox -->
+  <div>
+	  <% if(error && error.length > 0)  { %>
+		  <div class="danger" role="alert">
+			  <%= error %>
+		  </div>
+	  <% } %>
+	  <% if(success && success.length > 0)  { %>
+		  <div class="success" role="alert">
+			  <%= success %>
+		  </div>
+	  <% } %>
+  </div>
+	
   <header>
     <h2><a href="https://github.com/arails"><i class="fab fa-github fa-2x"></i></a></h2>
     <nav>
@@ -93,9 +105,9 @@
     <p>If you would like to get in touch with me about an employment opportunity or a project you'd like help with, just enter your e-mail address below and I'll reach out
 	  to you as soon as possible.</p>
     <hr>
-    <form>
-      <input type="email" placeholder="Email">
-      <a href="#" class="btn">Reach out</a>
+    <form action="/send" method="POST">
+      <input type="email" name="email" placeholder="Email">
+      <button type="submit" class="btn">Reach out</button>
     </form>
   </section>
 
@@ -108,6 +120,5 @@
       <li><a href="https://www.linkedin.com/in/andrew-rails/"><i class="fab fa-linkedin fa-2x"></i></a></li>
     </ul>
   </footer>
-
 </body>
 </html>
