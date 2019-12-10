@@ -6,7 +6,8 @@
   <title>A Rails</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-  <link rel="stylesheet" href="/stylesheets/styles.css">
+  <link rel="stylesheet" href="/stylesheets/lightbox.min.css">
+	<link rel="stylesheet" href="/stylesheets/styles.css">
   <script src="https://kit.fontawesome.com/2d71cd40b1.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -46,13 +47,17 @@
     <h3 class="title">Some of my past projects:</h3>
     <p>Below you'll find some of the projects I've brought to life. Click on the thumbnails to visit the sites or view larger versions of the designs.</p>
       <hr>
+
       <ul class="grid">
-        <li class="small" style="background-image: url(/img/webears1.jpg);"><a href="https://fierce-crag-89006.herokuapp.com/"></a></li>
-        <li class="large" style="background-image: url(/img/webears.jpg);"><a href="https://fierce-crag-89006.herokuapp.com/collections"></a></li>
-        <li class="large" style="background-image: url(/img/coffeebranding.jpg);"></li>
-        <li class="small" style="background-image: url(/img/scicons.jpg);"></li>
+        <li class="small" id="webears1" style="background-image: url(/img/webears1.jpg);"><a href="/img/webears1.jpg" data-lightbox="mygallary" data-title="This is a teddybear collector sns site I made. To visit a demo of the app, click the thumbnail next to this one to visit the site."></a></li>
+        <li class="large" id="webears2" style="background-image: url(/img/webears.jpg);"><a href="https://fierce-crag-89006.herokuapp.com/" target="_blank"></a></li>
+        <li class="large" style="background-image: url(/img/coffeebranding.jpg);"><a href="/img/coffeebranding.jpg" data-lightbox="mygallary" data-title="This is branding I did for a fictional comic-themed coffee shop. The concept is to have the logo and menu layout play on the retro American comic aesthetic."></a></li>
+        <li class="small" style="background-image: url(/img/scicons.jpg);"><a href="/img/scicons.jpg" data-lightbox="mygallary" data-title="I'm currently making a series of icons based-on weapon models for all the characters in the fighting game Soulcalibur VI"></a></li>
       </ul>
+		
   </section>
+	
+  
 
   <section class="about">
 	<a name="about"></a>
@@ -72,7 +77,7 @@
 
     <ul class="grid">
       <li>
-          <i class="fas fa-code fa-4x"></i>
+        <i class="fas fa-code fa-4x"></i>
         <h4>HTML / CSS / JavaScript</h4>
         <p>The "bread and butter" of front-end development. These were the first skills I learned when getting a taste for web development 3 years ago. 
         <br>I've used these three to develop increasingly complex projects during my journey as a developer.</p>
@@ -120,5 +125,6 @@
       <li><a href="https://www.linkedin.com/in/andrew-rails/"><i class="fab fa-linkedin fa-2x"></i></a></li>
     </ul>
   </footer>
+	<script type='text/javascript' src="/scripts/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
